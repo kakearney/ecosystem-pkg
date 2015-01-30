@@ -1,4 +1,4 @@
-0function A = calcstanza(A)
+function A = calcstanza(A)
 % CALCSTANZA Calculate B and Q/B values for multi-stanza Ecopath groups
 %
 % A = calcstanza(In)
@@ -42,15 +42,6 @@
 % Copyright 2014 Kelly Kearney
 
 ns = length(A.stanzadata.StanzaID);
-
-% Setup of discretization.  The original code uses the 90% of Winf value as
-% amax, but I think just setting one high-mark will suffice.
-
-% da = 1;
-% amax = 2400;    % Going to assume nothing lives longer than 200 years.  
-% xa = 0:da:amax; % months
-
-% 
 
 for is = 1:ns
     
@@ -129,7 +120,7 @@ for is = 1:ns
 
     % Plot to check
     
-    plotflag = true;
+    plotflag = false;
     if plotflag
         figure;
 
